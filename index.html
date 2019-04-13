@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+
+  <title>Calorie Calculator</title>
+
+  <style>
+   #output-div{
+     display: none;
+   }
+
+   #loading-div{
+     display: none;
+   }
+
+   #again-btn{
+     display: none;
+   }
+
+   body{
+     background-color:whitesmoke;
+     color:teal;
+   }
+  </style>
+</head>
+<body>
+
+  <div class="container" id="container">
+    <h1 class="display-4 mt-3" >Calorie Calculator</h1>
+  <form action="" id="my-form">
+    <div class="d-flex flex-row row-hl" id="flex-row-2">
+      <div class="form-group item-hl mt-3 mr-5" id="flex-row-1">
+      <label for="">Calories</label>
+      <input type="number" class="form-control" id="calorie-input" placeholder="Enter your calories">
+      </div>
+      <div class="form-group item-hl mt-3">
+          <label for="">Weight(kg)</label>
+          <input type="number" class="form-control" id="weight-input" placeholder="Enter your weight">
+          </div>
+
+    </div>
+
+    <div class="d-flex flex-row row-hl">
+      <div class="form-group item-hl p-4">
+        <label for="">Walking</label>
+        <input type="number" class="form-control" id="walk-input" placeholder="Walk duration(min.)">
+      </div>
+    <div class="form-group item-hl p-4">
+          <label for="">Running</label>
+          <input type="number" class="form-control" id="run-input" placeholder="Run duration(min.)">
+        </div>
+      <div class="form-group item-hl p-4">
+            <label for="">Cycling</label>
+            <input type="number" class="form-control" id="cycle-input" placeholder="Cycling duration(min.)">
+      </div>
+      <div class="form-group item-hl p-4">
+          <label for="">Swimming</label>
+          <input type="number" class="form-control" id="swim-input" placeholder="Swim duration(min.)">
+    </div>   
+  </div>
+
+  <div class="d-flex flex-row justify-content-center row-hl">
+    <input type="submit" class="btn btn-block btn-primary item-hl p-2" id="calculate-btn" value="Calculate">
+  </div>
+    
+   </form>
+
+
+   <div class="card mt-3" id="output-div">
+    <div class="card-body">
+   <div class="d-flex flex-row justify-content-center row-hl">
+     <div class="item-hl p-5 mr-5">
+       <h3 class="h3" id="calories-h3">Calories Burned:</h3>
+     </div>
+     <div class="item-hl p-5 ml-5">
+       <h3 class="h3" id="weight-h3">Weight Loss(kg):</h3>
+     </div>
+    </div>
+   </div>
+  </div>
+
+  <div class="card mt-3" id="loading-div">
+    <div class="card-body">
+      <div class="d-flex flex-row row-hl justify-content-center">
+        <div class="item-hl p-5 mr-5">
+          <img src="img/loading.gif" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button class="btn btn-danger btn-block" id="again-btn">Calculate Again</button>
+
+  </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script> 
+    <script src="app.js"></script>
+</body>
+</html>
